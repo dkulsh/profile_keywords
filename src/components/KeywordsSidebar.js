@@ -36,6 +36,8 @@ import GolangWords from "../data/Golang";
 import NodeJSWords from "../data/NodeJS";
 import CPPWords from "../data/C++";
 import CustomIcons from "../assets/Icons";
+import FileUpload from './FileUpload';
+import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 
 
 function KeywordsSidebar() {
@@ -92,6 +94,14 @@ function KeywordsSidebar() {
             C++
           </MenuItem>
 
+          <MenuItem
+            icon={<QuestionMarkIcon fontSize="large"/>}
+            component={<Link to="findYours" className="link" />}
+          >
+            Find Yours ...
+          </MenuItem>
+
+
         </Menu>
       </Sidebar>
 
@@ -103,6 +113,7 @@ function KeywordsSidebar() {
           <Route path="golang" element={<Golang />} />
           <Route path="nodejs" element={<NodeJS />} />
           <Route path="cpp" element={<CPP />} />
+          <Route path="findYours" element={<YourKeywords />} />
         </Routes>
       </section>
 
@@ -178,6 +189,12 @@ const Home = () => {
         Profile data has then been analyzed by Machine Learning algorithms.
         And finally presented as a wordcloud.
       </p>
+
+      <footer class="footer">
+        <a target="_blank" rel="noreferrer" href="https://icons8.com/icon/YKUVbL0x4M2f/keyword">Keyword</a> icon by
+        <a target="_blank" rel="noreferrer" href="https://icons8.com">Icons8</a>
+      </footer>
+
     </>
   );
 };
@@ -187,7 +204,6 @@ const Java = () => {
     <>
       {/* <h1 className="header"> DASHBOARD PAGE</h1> */}
       <h3>Java Profile Keywords</h3>
-      {/* <p>Lorem ipsum dolor sit amet...</p> */}
       <CenteredTabs
         techwords={JavaWords.TechKeywords}
         conceptwords={JavaWords.ConceptKeywords}
@@ -235,7 +251,6 @@ const NodeJS = () => {
     <>
       {/* <h1 className="header">KEEP TRACK OF YOUR SPENDINGS</h1> */}
       <h3>Node JS profile keywords</h3>
-      {/* <p>Lorem ipsum dolor sit amet...</p> */}
       <CenteredTabs
         techwords={NodeJSWords.TechKeywords}
         conceptwords={NodeJSWords.ConceptKeywords}
@@ -251,13 +266,23 @@ const CPP = () => {
     <>
       {/* <h1 className="header">KEEP TRACK OF YOUR SPENDINGS</h1> */}
       <h3>C++ profile keywords</h3>
-      {/* <p>Lorem ipsum dolor sit amet...</p> */}
       <CenteredTabs
         techwords={CPPWords.TechKeywords}
         conceptwords={CPPWords.ConceptKeywords}
         softskillswords={CPPWords.SoftSkillsKeywords}
         miscwords={CPPWords.MiscKeywords}
       />
+    </>
+  );
+};
+
+const YourKeywords = () => {
+  return (
+    <>
+      {/* <h1 className="header">Find missing keywords from your resume ...</h1> */}
+      <h2 className="header">Find missing keywords from your resume ...</h2>
+      {/* <h3>What keywords is your resume missing ??</h3> */}
+      <FileUpload />
     </>
   );
 };

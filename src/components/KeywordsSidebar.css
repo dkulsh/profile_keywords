@@ -26,3 +26,11 @@ h2 {
 .ps-sidebar-container{
     height: 100vh;
 }
+
+.footer {
+    position: fixed;
+    bottom: 20px; /* Adjust this value to change the distance from the bottom */
+    right: 20px; /* Adjust this value to change the distance from the right */
+    font-size: 14px;
+    color: #333; /* Text color */
+  }

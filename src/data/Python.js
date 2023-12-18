@@ -398,4 +398,6 @@ var InitialMiscKeywords = [
 
 const MiscKeywords = InitialMiscKeywords.slice(3, 20);
 
-export default { TechKeywords, ConceptKeywords, SoftSkillsKeywords, MiscKeywords }
+const AllPythonKeywords = { TechKeywords, ConceptKeywords, SoftSkillsKeywords, MiscKeywords }
+
+export default AllPythonKeywords;
