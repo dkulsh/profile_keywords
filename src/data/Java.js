@@ -64,7 +64,7 @@ var InitialTechKeywords = [
   { text: "jetty", size: 2 },
 ];
 
-const TechKeywords = InitialTechKeywords.slice(0, 20);
+const TechKeywords = InitialTechKeywords.slice(0, 40);
 
 var InitialConceptKeywords = [
   { text: "design", size: 1479 },
@@ -330,7 +330,7 @@ var InitialMiscKeywords = [
   { text: "quality", size: 512 },
 ];
 
-const MiscKeywords = InitialMiscKeywords.slice(3, 20);
+const MiscKeywords = InitialMiscKeywords.slice(0, 40);
 
 const AllJavaKeywords = { TechKeywords, ConceptKeywords, SoftSkillsKeywords, MiscKeywords }
 

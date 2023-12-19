@@ -35,6 +35,7 @@ import PythonWords from "../data/Python";
 import GolangWords from "../data/Golang";
 import NodeJSWords from "../data/NodeJS";
 import CPPWords from "../data/C++";
+import FreshersWords from "../data/Freshers";
 import CustomIcons from "../assets/Icons";
 import FileUpload from './FileUpload';
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
@@ -57,6 +58,13 @@ function KeywordsSidebar() {
           >
             {/* {" "} */}
             <h3>Technology</h3>
+          </MenuItem>
+
+          <MenuItem
+            icon={<CustomIcons.FreshersIcon />}
+            component={<Link to="freshers" className="link" />}
+          >
+            Freshers
           </MenuItem>
 
           <MenuItem
@@ -108,6 +116,7 @@ function KeywordsSidebar() {
       <section style={{ width: "100%" }}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="freshers" element={<Freshers />} />
           <Route path="java" element={<Java />} />
           <Route path="python" element={<Python />} />
           <Route path="golang" element={<Golang />} />
@@ -199,6 +208,24 @@ const Home = () => {
   );
 };
 
+const Freshers = () => {
+  return (
+    <>
+      <h3>Freshers profile keywords</h3>
+      <CenteredTabs
+        techwords={FreshersWords.TechKeywords}
+        techReduceSizeBy={8}
+        conceptwords={FreshersWords.ConceptKeywords}
+        conceptReduceSizeBy={14}
+        softskillswords={FreshersWords.SoftSkillsKeywords}
+        softSkillsReduceSizeBy={14}
+        miscwords={FreshersWords.MiscKeywords}
+        miscReduceSizeBy={20}
+      />
+    </>
+  );
+};
+
 const Java = () => {
   return (
     <>
@@ -207,8 +234,11 @@ const Java = () => {
       <CenteredTabs
         techwords={JavaWords.TechKeywords}
         conceptwords={JavaWords.ConceptKeywords}
+        conceptReduceSizeBy={8}
         softskillswords={JavaWords.SoftSkillsKeywords}
+        softSkillsReduceSizeBy={4}
         miscwords={JavaWords.MiscKeywords}
+        miscReduceSizeBy={10}
       />
     </>
   );
@@ -222,9 +252,13 @@ const Python = () => {
       {/* <p>Lorem ipsum dolor sit amet...</p> */}
       <CenteredTabs
         techwords={PythonWords.TechKeywords}
+        techReduceSizeBy={3}
         conceptwords={PythonWords.ConceptKeywords}
+        conceptReduceSizeBy={8}
         softskillswords={PythonWords.SoftSkillsKeywords}
+        softSkillsReduceSizeBy={8}
         miscwords={PythonWords.MiscKeywords}
+        miscReduceSizeBy={17}
       />
     </>
   );
@@ -238,9 +272,13 @@ const Golang = () => {
       {/* <p>Lorem ipsum dolor sit amet...</p> */}
       <CenteredTabs
         techwords={GolangWords.TechKeywords}
+        techReduceSizeBy={0.8}
         conceptwords={GolangWords.ConceptKeywords}
+        conceptReduceSizeBy={3}
         softskillswords={GolangWords.SoftSkillsKeywords}
+        softSkillsReduceSizeBy={2}
         miscwords={GolangWords.MiscKeywords}
+        miscReduceSizeBy={4}
       />
     </>
   );
@@ -253,9 +291,13 @@ const NodeJS = () => {
       <h3>Node JS profile keywords</h3>
       <CenteredTabs
         techwords={NodeJSWords.TechKeywords}
+        techReduceSizeBy={2}
         conceptwords={NodeJSWords.ConceptKeywords}
+        conceptReduceSizeBy={7}
         softskillswords={NodeJSWords.SoftSkillsKeywords}
+        softSkillsReduceSizeBy={5}
         miscwords={NodeJSWords.MiscKeywords}
+        miscReduceSizeBy={10}
       />
     </>
   );
@@ -268,9 +310,13 @@ const CPP = () => {
       <h3>C++ profile keywords</h3>
       <CenteredTabs
         techwords={CPPWords.TechKeywords}
+        techReduceSizeBy={2}
         conceptwords={CPPWords.ConceptKeywords}
+        conceptReduceSizeBy={5}
         softskillswords={CPPWords.SoftSkillsKeywords}
+        softSkillsReduceSizeBy={4}
         miscwords={CPPWords.MiscKeywords}
+        miscReduceSizeBy={11}
       />
     </>
   );

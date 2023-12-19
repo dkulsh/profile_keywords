@@ -85,7 +85,7 @@ var InitialTechKeywords = [
   { text: "experience object", size: 9 },
 ];
 
-const TechKeywords = InitialTechKeywords.slice(0, 20);
+const TechKeywords = InitialTechKeywords.slice(0, 40);
 
 var InitialConceptKeywords = [
   { text: "design", size: 561 },
@@ -403,7 +403,7 @@ var InitialMiscKeywords = [
   { text: "fast", size: 62 },
 ];
 
-const MiscKeywords = InitialMiscKeywords.slice(3, 20);
+const MiscKeywords = InitialMiscKeywords.slice(0, 40);
 
 const AllGolangKeywords =  { TechKeywords, ConceptKeywords, SoftSkillsKeywords, MiscKeywords }
 

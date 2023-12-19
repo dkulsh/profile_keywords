@@ -13,13 +13,16 @@ import KeyboardIcon from "@mui/icons-material/Keyboard";
 import MiscellaneousServicesIcon from "@mui/icons-material/MiscellaneousServices";
 import { divideSizeBy } from "./Utils";
 
-
 export default function CenteredTabs(props) {
   const {
     techwords,
+    techReduceSizeBy = 1,
     conceptwords,
+    conceptReduceSizeBy = 1,
     softskillswords,
+    softSkillsReduceSizeBy = 1,
     miscwords,
+    miscReduceSizeBy = 1,
     fontScale = 5,
   } = props;
 
@@ -76,13 +79,16 @@ export default function CenteredTabs(props) {
         <TabPanel value="1">
           {/* <WordCloud text={TechKeywords} fontScale={5} /> */}
           {/* <h3>Larger a word, higher its frequency</h3> */}
-          <WordCloud text={techwords} fontScale={fontScale} />
+          <WordCloud
+            text={divideSizeBy(techwords, techReduceSizeBy)}
+            fontScale={fontScale}
+          />
         </TabPanel>
 
         <TabPanel value="2">
           {/* <WordCloud text={divideSizeBy(ConceptKeywords, 10)} fontScale={5} /> */}
           <WordCloud
-            text={divideSizeBy(conceptwords, 10)}
+            text={divideSizeBy(conceptwords, conceptReduceSizeBy)}
             fontScale={fontScale}
           />
         </TabPanel>
@@ -90,7 +96,7 @@ export default function CenteredTabs(props) {
         <TabPanel value="3">
           {/* <WordCloud text={divideSizeBy(SoftSkillsKeywords, 6)} fontScale={5} /> */}
           <WordCloud
-            text={divideSizeBy(softskillswords, 6)}
+            text={divideSizeBy(softskillswords, softSkillsReduceSizeBy)}
             fontScale={fontScale}
           />
         </TabPanel>
@@ -98,7 +104,10 @@ export default function CenteredTabs(props) {
         <TabPanel value="4">
           {/* <WordCloud text={divideSizeBy(MiscKeywords, 5)} fontScale={5} /> */}
           {/* <h3>Most words might have the similar frequencies</h3> */}
-          <WordCloud text={divideSizeBy(miscwords, 5)} fontScale={fontScale} />
+          <WordCloud
+            text={divideSizeBy(miscwords, miscReduceSizeBy)}
+            fontScale={fontScale}
+          />
         </TabPanel>
       </TabContext>
     </Box>

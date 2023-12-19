@@ -79,7 +79,7 @@ var InitialTechKeywords = [
   { text: "gcp azure", size: 35 },
 ];
 
-const TechKeywords = InitialTechKeywords.slice(0, 20);
+const TechKeywords = InitialTechKeywords.slice(0, 40);
 
 var InitialConceptKeywords = [
   { text: "data", size: 4421 },
@@ -396,7 +396,7 @@ var InitialMiscKeywords = [
   { text: "user", size: 271 }
 ];
 
-const MiscKeywords = InitialMiscKeywords.slice(3, 20);
+const MiscKeywords = InitialMiscKeywords.slice(0, 40);
 
 const AllPythonKeywords = { TechKeywords, ConceptKeywords, SoftSkillsKeywords, MiscKeywords }
 

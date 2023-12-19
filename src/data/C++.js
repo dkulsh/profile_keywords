@@ -102,7 +102,7 @@ var InitialTechKeywords = [
   { text: "c linux", size: 14 },
 ];
 
-const TechKeywords = InitialTechKeywords.slice(0, 20);
+const TechKeywords = InitialTechKeywords.slice(0, 40);
 
 var InitialConceptKeywords = [
   { text: "development", size: 1324 },
@@ -420,7 +420,7 @@ var InitialMiscKeywords = [
   { text: "problem solving", size: 175 },
 ];
 
-const MiscKeywords = InitialMiscKeywords.slice(3, 20);
+const MiscKeywords = InitialMiscKeywords.slice(0, 40);
 
 const AllCPPKeywords = {
   TechKeywords,
